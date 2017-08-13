@@ -1,7 +1,10 @@
+@charset "UTF-8";
 body {
   background: #ebe8d0;
+  font-family: 'Georgia';
   font-size: 62.5%; }
 
+/*中间内容*/
 .content-main {
   float: left;
   width: 730px;
@@ -13,7 +16,8 @@ body {
     position: relative;
     top: 0;
     left: 0;
-    height: 100%; }
+    height: 100%;
+    /*左边内容*/ }
     .content-main .main-container .content {
       float: left;
       box-sizing: border-box;
@@ -23,41 +27,54 @@ body {
         padding: 0 1.5em 0.3em;
         line-height: 1.5;
         font-size: 1.4em;
+        font-weight: 500;
         color: #333333; }
-    .content-main .main-container .container-side-l ul {
+      .content-main .main-container .content a {
+        text-decoration: none;
+        color: #703f0e; }
+        .content-main .main-container .content a:hover {
+          color: #616623;
+          text-decoration: underline; }
+    .content-main .main-container .container-side-left ul {
       padding: 10px 0 0 0; }
-    .content-main .main-container .container-side-l li {
+    .content-main .main-container .container-side-left li {
       display: block;
       box-sizing: border-box;
       padding: 0.5em 0; }
-      .content-main .main-container .container-side-l li span {
+      .content-main .main-container .container-side-left li span {
         font-size: 1.2em;
+        margin-left: 1.5em;
         color: #baab77; }
-      .content-main .main-container .container-side-l li a {
+      .content-main .main-container .container-side-left li a {
         text-decoration: none; }
-        .content-main .main-container .container-side-l li a:hover {
+        .content-main .main-container .container-side-left li a:hover {
           text-decoration: underline; }
-    .content-main .main-container .container-side-l li a:first-child {
+    .content-main .main-container .container-side-left li a:first-child {
       display: block;
       color: #703f0e;
-      font-size: 1.5em;
+      font-size: 1.3em;
       font-weight: 600;
       font-family: Arial; }
-      .content-main .main-container .container-side-l li a:first-child:hover {
+      .content-main .main-container .container-side-left li a:first-child:hover {
         color: #616623; }
-    .content-main .main-container .container-side-l li a:nth-child(3) {
+    .content-main .main-container .container-side-left li a:nth-child(3) {
       color: #767b3e;
       font-size: 1.2em; }
-      .content-main .main-container .container-side-l li a:nth-child(3):hover {
+      .content-main .main-container .container-side-left li a:nth-child(3):hover {
         color: #616623; }
+    .content-main .main-container .container-side-left .fa-file-text {
+      color: #a79355; }
+    .content-main .main-container .container-side-left .fa-circle {
+      color: #bbac7d; }
     .content-main .main-container .container-main {
       width: 44%;
       border-left: 1px solid #a79355;
       border-right: 1px solid #a79355; }
-    .content-main .main-container .container-side-r p {
+    .content-main .main-container .container-side-right p {
       font-style: italic;
       color: #66472e; }
 
+/*头部*/
 .content-secondly {
   float: left;
   margin: 0 0 0 -366px;
@@ -146,25 +163,104 @@ body {
   color: #fff; }
 
 .container-title {
+  position: relative;
   width: 100%;
   height: 82px;
+  box-sizing: border-box;
+  line-height: 1.5;
+  text-align: left;
+  padding-top: 35px;
   border-bottom: 1px solid #a79355; }
+  .container-title h3 {
+    margin: 0 0 0 0;
+    font-size: 1.8em;
+    font-weight: normal;
+    color: #c1ba93; }
+    .container-title h3 span {
+      color: #703f0e;
+      font-weight: bold; }
+    .container-title h3 .special {
+      color: #636825; }
 
+/*伪元素横线*/
+.side-title {
+  width: 80%; }
+
+.container-title .side:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  left: 0;
+  border-top: 1px solid #a79355; }
+
+.side-title-right {
+  margin-left: 20px; }
+
+/*中间主内容大标题*/
 .main-total-title {
+  padding-top: 0;
+  line-height: 1.6;
+  text-align: left;
   background: #e0e0a2; }
+  .main-total-title h3 {
+    font-size: 2.6em;
+    margin: 0 0 0 20px;
+    color: #703f0e; }
+    .main-total-title h3 span {
+      margin: 0 0 0 40px; }
 
+/*中间主内容小标题*/
 .main-small-title {
   height: 50px;
+  line-height: 50px;
   border-top: 1px solid #a79355;
   border-bottom: 1px solid #a79355;
+  text-align: left;
   background: #e0e0a2; }
+  .main-small-title h3 {
+    font-size: 2em;
+    margin: 0 0 0 20px;
+    color: #703f0e; }
 
+/*左边内容小标题*/
+.side-small-title {
+  position: relative;
+  width: 80%;
+  height: 50px;
+  border-bottom: 1px solid #a79355; }
+  .side-small-title h3 {
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    margin: 0;
+    font-size: 1.8em;
+    color: #636825; }
+
+/*中间主内容底部*/
 .main-bottom {
   position: relative;
   margin-bottom: 20px; }
+  .main-bottom ul {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 176px;
+    transform: translate(-50%, -50%); }
+  .main-bottom li {
+    float: left; }
+  .main-bottom a {
+    float: left;
+    padding: 0 0.5em;
+    color: #703f0e;
+    text-decoration: none; }
+    .main-bottom a:hover {
+      color: #616623;
+      text-decoration: underline; }
 
 .main-bottom:after {
   position: absolute;
+  left: 0;
   bottom: -20px;
   content: "";
   height: 10px;
@@ -187,3 +283,16 @@ body {
 
 .main-container:after {
   clear: both; }
+
+/*0-992*/
+@media (min-width: 0) and (max-width: 996px) {
+  .content-secondly {
+    display: none; }
+  .content-main {
+    width: 100%; }
+    .content-main .main-container .content p {
+      font-size: 3em; }
+    .content-main .container-side-left {
+      padding-left: 20px; }
+      .content-main .container-side-left li {
+        font-size: 2.5em; } }

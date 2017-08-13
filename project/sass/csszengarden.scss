@@ -1,7 +1,10 @@
 body{
 	background:$color-body-bg;
+	font-family:'Georgia';
 	font-size:62.5%;
 }
+
+/*中间内容*/
 
 .content-main{
 	float:left;
@@ -25,10 +28,22 @@ body{
 				padding: 0 1.5em 0.3em;
 				line-height: 1.5;
 				font-size: $p-size;
+				font-weight: 500;
 				color:$color-p;
 			}
+			a{
+				text-decoration: none;
+				color:$color-first-li;
+				&:hover{
+					color:$color-a-hover;
+					text-decoration:underline;
+				}
+			}
 		}
-		.container-side-l{
+
+		/*左边内容*/
+
+		.container-side-left{
 			ul{
 				padding:10px 0 0 0;
 			}
@@ -37,7 +52,8 @@ body{
 				box-sizing:border-box;
 				padding:0.5em 0;
 				span{
-					font-size: $second--li-size;
+					font-size: $second-li-size;
+					margin-left: 1.5em;
 					color: #baab77;
 				}
 				a{
@@ -50,32 +66,42 @@ body{
 			li a:first-child {
 				display: block;
       	color: $color-first-li;
-      	font-size: $first--li-size;
+      	font-size: $first-li-size;
       	font-weight: 600;
       	font-family: Arial;
       	&:hover{
-      		color:#616623;
+      		color:$color-a-hover;
       	}
     	}
     	li a:nth-child(3) {
       	color: $color-second-li;
-      	font-size: $second--li-size;
+      	font-size: $second-li-size;
       	&:hover{
-      		color:#616623;
+      		color:$color-a-hover;
       	}
-    	}
+			}
+			.fa-file-text{
+				color: $color-file-text;
+			}
+			.fa-circle{
+			color:$color-fa-circle;
+			}
 		}
+
 		.container-main{
 			width: 44%;
 			border-left:1px solid $border-solid;
 			border-right:1px solid $border-solid;
 		}
-		.container-side-r p{
+
+		.container-side-right p{
 			font-style:italic;
 			color:$container-side-r-p;
 		}
 	}
 }
+
+/*头部*/
 
 .content-secondly{
 	float:left;
@@ -180,35 +206,135 @@ body{
 }
 
 .container-title{
+	position: relative;
 	width:$width;
 	height: $middle-header-h;
+	box-sizing: border-box;
+	line-height: 1.5;
+	text-align: left;
+	padding-top: 35px;
 	border-bottom:1px solid $border-solid;
+	h3{
+		margin: 0 0 0 0;
+		font-size: 1.8em;
+		font-weight: normal;
+		color: #c1ba93;
+		span{
+		color:$color-main-bottom;
+		font-weight: bold;
+		}
+		.special{
+			color: #636825;
+		}
+	}
 }
 
-.main-total-title{
-	background:#e0e0a2;
+/*伪元素横线*/
+
+.side-title{
+	width: 80%;
 }
+
+.container-title .side:after{
+	position: absolute;
+	content: "";
+  width: 100%;
+  left: 0;
+	border-top: 1px solid $border-solid;
+}
+
+.side-title-right{
+	margin-left: 20px;
+}
+
+/*中间主内容大标题*/
+
+.main-total-title{
+	padding-top:0;
+	line-height: 1.6;
+	text-align: left;
+	background:#e0e0a2;
+	h3{
+		font-size: 2.6em;
+		margin: 0 0 0 20px;
+		color:$color-main-bottom;
+		span{
+			margin: 0 0 0 40px;
+		}
+	}
+}
+
+/*中间主内容小标题*/
 
 .main-small-title{
 	height:$main-small-title;
+	line-height: $main-small-title;
 	border-top:1px solid $border-solid;
 	border-bottom:1px solid $border-solid;
+	text-align: left;
 	background:#e0e0a2;
+	h3{
+		font-size: 2em;
+		margin: 0 0 0 20px;
+		color:$color-main-bottom;
+	}
 }
+
+/*左边内容小标题*/
+.side-small-title{
+	position: relative;
+	width: 80%;
+	height:$main-small-title;
+	border-bottom:1px solid $border-solid;
+	h3{
+		position: absolute;
+		left: 0;
+		bottom: -4px;
+		width: 100%;
+		margin: 0;
+		font-size: 1.8em;
+		color: #636825;
+	}
+}
+
+/*中间主内容底部*/
 
 .main-bottom{
 	position: relative;
-  margin-bottom: 20px;
+	margin-bottom: 20px;
+	ul{
+		position: absolute;
+    left: 50%;
+		top: 50%;
+		width: 176px;
+    transform: translate(-50%,-50%);
+	}
+	li{
+		float: left;
+	}
+	a{
+		float: left;
+		padding: 0 0.5em;
+		color:$color-main-bottom;
+		text-decoration: none;
+		&:hover{
+			color:$color-a-hover;
+			text-decoration: underline;
+		}
+	}
 }
 .main-bottom:after{
 	position:absolute;
+	left: 0;
 	bottom: -20px;
 	content:"";
 	height: 10px;
 	width:100%;
 	background:$nav-bottom-bg;
 }
+
 /*clear both*/
+
 .container-main:before,
 .container-main:after {
 	content: "";
@@ -225,6 +351,27 @@ body{
 }
 .main-container:after {
 	clear: both;
+}
+
+
+/*0-992*/
+
+@media(min-width:0) and (max-width: 996px){
+	.content-secondly{
+		display: none;
+	}
+	.content-main{
+		width: 100%;
+		.main-container .content p{
+			font-size: 3em;
+		}
+		.container-side-left{
+			padding-left: 20px;
+			li{
+				font-size: 2.5em;
+			}
+		}
+	}
 }
 
 
