@@ -292,8 +292,8 @@ body {
   .content-main {
     width: 100%; }
     .content-main .main-container .content p {
-      font-size: 3em; }
+      font-size: 1em; }
     .content-main .container-side-left {
       padding-left: 20px; }
       .content-main .container-side-left li {
-        font-size: 2.5em; } }
+        font-size: 1em; } }
