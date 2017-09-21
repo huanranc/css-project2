@@ -63,11 +63,13 @@ body {
 		font-size: .75rem;
 		color: $site-txt-color;
 		background: url(../images/bg_beautyof.jpg) no-repeat;
+
 		p{
 			display: inline-block;
 			width: 12.5rem;
 			padding: 0 2.5rem;
 		}
+		
 		a {
 			display: inline-block;
 			font-weight: 800;
@@ -138,6 +140,15 @@ body {
 		font-family: Georgia, serif;
 		font-size: .75rem;
 		line-height: 1.5;
+
+		span {
+			padding-left: 1rem;
+		}
+	}
+
+	.archives {
+		margin: 0;
+		list-style-type: square;
 	}
 }
 

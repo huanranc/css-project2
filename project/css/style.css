@@ -104,6 +104,11 @@ body {
     font-family: Georgia, serif;
     font-size: .75rem;
     line-height: 1.5; }
+    .page-sidebar .siderbar-body span {
+      padding-left: 1rem; }
+  .page-sidebar .archives {
+    margin: 0;
+    list-style-type: square; }
 
 .left {
   margin-left: -1.25rem;
