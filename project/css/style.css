@@ -95,7 +95,7 @@ body::after {
   content: "";
   position: absolute;
   right: -42%;
-  width: 50%;
+  width: 42%;
   height: 7.1875rem;
   background: #d9d98b;
   border-top: 1px solid #a79355;
