@@ -60,7 +60,7 @@ body {
       color: #703f0e; }
 
 body::before {
-  z-index: 1;
+  z-index: -1;
   content: "";
   position: absolute;
   top: 0;
