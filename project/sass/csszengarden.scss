@@ -62,6 +62,8 @@ body {
 		font-family: Georgia, serif;
 		font-size: .75rem;
 		color: $site-txt-color;
+		border-top: 1px solid $border-color;
+		border-bottom: 1px solid $border-color;
 		background: url(../images/bg_beautyof.jpg) no-repeat;
 
 		p{
@@ -80,25 +82,80 @@ body {
 	}
 }
 
-.page-header::before {
+body::before {
+	z-index: 1;
 	content: "";
 	position: absolute;
-	width: 100%;
-	height: 100%;
-	left: -100%;
 	top: 0;
+	left: 0;
+	width: 50%;
+	height: 15.625rem;
 	border-bottom: 1px solid $border-color;
 }
 
-.page-header::after {
+body::after {
+	z-index: -1;
 	content: "";
 	position: absolute;
-	width: 100%;
-	height: 100%;
-	right: -100%;
 	top: 0;
+	right: 0;
+	width: 50%;
+	height: 15.625rem;
 	border-bottom: 1px solid $border-color;
 }
+
+.site-image::before {
+	z-index: -1;
+	content: "";
+	position: absolute;
+	left: -50%;
+	width: 50%;
+	background: #d9d98b;
+	height: 7.1875rem;
+	border-top: 1px solid $border-color;
+	border-bottom: 1px solid $border-color;
+}
+
+.site-image::after {
+	z-index: -1;
+	content: "";
+	position: absolute;
+	right: -42%;
+	width: 50%;
+	height: 7.1875rem;
+	background: #d9d98b;
+	border-top: 1px solid $border-color;
+	border-bottom: 1px solid $border-color;
+}
+
+.text-explain::before {
+	z-index: -1;
+	content: "";
+	position: absolute;
+	top: -10%;
+	left: -50%;
+	width: 50%;
+	height: 1rem;
+	border-top: 1px solid #a79355;
+	border-bottom: 1px solid #a79355;
+	box-sizing: border-box;
+	background: #bdaf83;
+}
+
+.text-explain::after {
+	z-index: -1;
+	content: "";
+	position: absolute;
+	top: -10%;
+	right: -42%;
+	width: 50%;
+	height: 1rem;
+	border-top: 1px solid #a79355;
+	border-bottom: 1px solid #a79355;
+	box-sizing: border-box;
+	background: #bdaf83;
+}
+
 
 //page-body
 //============================================
@@ -125,7 +182,20 @@ body {
 		padding: 2.25rem 1.25rem;
 		margin: 0;
 		height: 5rem;
-		color: #703f0e; 
+		font-size: 1.25rem;
+		font-weight: 400;
+		color: $site-txt-color;
+			span {
+				font-size: 1.17rem;
+				font-weight: bold;
+				color: #703f0e;
+			}
+
+			.special {
+				font-size: 1.17rem;
+				font-weight: 400;
+				color: #636825;
+			}
 	}
 
 	.siderbar-small-title{
@@ -136,7 +206,7 @@ body {
 
 	.siderbar-body {
 		margin: .75rem 0;
-		padding: 0 1.25rem;
+		padding-left: 1.25rem;
 		font-family: Georgia, serif;
 		font-size: .75rem;
 		line-height: 1.5;
@@ -171,7 +241,7 @@ body {
 	position: absolute;
 	width: 90%;
 	height: 1px;
-	top: 4.6rem;
+	top: 4.8rem;
 	right: 0;
 	border-bottom: 1px solid $border-color;
 }
@@ -215,7 +285,7 @@ body {
 			display: block;
 			color: #703f0e;
 			font-weight: 900;
-			font-size: .75rem;
+			font-size: .9rem;
 			padding: .1rem 0;
 		} 
 	}
@@ -247,16 +317,23 @@ body {
 		
 		.content-title{
 			margin: 0;
-			padding: 0 1rem;
-			vertical-align: middle;
-			line-height: 2.5rem;
+			padding: .3rem 1rem;
+			line-height: 1.5;
 			color: $content-title-color;
+			span {
+				padding-left: 2rem;
+			}
+		}
+
+		.big-titile {
+			padding: 1.5rem;
+			line-height: 1.2;
 		}
 	}
 
 	.page-footer {
 		position: relative;
-		margin-bottom: 1.25rem;
+		margin-bottom: 1.2rem;
 		display: flex;
     align-items: center;
     justify-content: center;
