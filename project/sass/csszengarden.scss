@@ -7,16 +7,20 @@ body {
 //header
 //==========================================
 .page-header {
+	width: 100%;
+	box-sizing: border-box;
 	position: relative;
-	width: 45.72rem;
-	height: 15.625rem;
-	margin:0 auto;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	border-left: 1px solid $border-color;
-	border-right: 1px solid $border-color;
+	.header-body {
+		width: 54%;		
+		height: 15.625rem;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		border-left: 1px solid $border-color;
+		border-right: 1px solid $border-color;
+		}
 
 	.site-txt {
 		padding: 0 2.5rem;
@@ -43,7 +47,6 @@ body {
 	}
 	
 	.text-explain {
-		position: absolute;
 		box-sizing: border-box;
 		width: 100%;
 		height: 1rem;
@@ -82,24 +85,24 @@ body {
 	}
 }
 
-body::before {
+.header-body::before {
 	z-index: -1;
 	content: "";
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 50%;
+	width: 23%;
 	height: 15.625rem;
 	border-bottom: 1px solid $border-color;
 }
 
-body::after {
+.header-body::after {
 	z-index: -1;
 	content: "";
 	position: absolute;
 	top: 0;
 	right: 0;
-	width: 50%;
+	width: 23%;
 	height: 15.625rem;
 	border-bottom: 1px solid $border-color;
 }
@@ -108,8 +111,8 @@ body::after {
 	z-index: -1;
 	content: "";
 	position: absolute;
-	left: -50%;
-	width: 50%;
+	left: 0;
+	width: 23%;
 	background: #d9d98b;
 	height: 7.1875rem;
 	border-top: 1px solid $border-color;
@@ -120,8 +123,8 @@ body::after {
 	z-index: -1;
 	content: "";
 	position: absolute;
-	right: -42%;
-	width: 42%;
+	right: 0;
+	width: 23%;
 	height: 7.1875rem;
 	background: #d9d98b;
 	border-top: 1px solid $border-color;
@@ -132,9 +135,8 @@ body::after {
 	z-index: -1;
 	content: "";
 	position: absolute;
-	top: -10%;
-	left: -50%;
-	width: 50%;
+	left: 0;
+	width: 23%;
 	height: 1rem;
 	border-top: 1px solid #a79355;
 	border-bottom: 1px solid #a79355;
@@ -146,9 +148,8 @@ body::after {
 	z-index: -1;
 	content: "";
 	position: absolute;
-	top: -10%;
-	right: -42%;
-	width: 50%;
+	right: 0;
+	width: 23%;
 	height: 1rem;
 	border-top: 1px solid #a79355;
 	border-bottom: 1px solid #a79355;
@@ -160,7 +161,8 @@ body::after {
 //page-body
 //============================================
 .page-body {
-	width: 45.72rem;
+	//width: 45.72rem;
+	width: 54%;	
 	//width: 38%;
 	margin:0 auto;
 	border-top: 1px solid $border-color;
